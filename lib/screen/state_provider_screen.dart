@@ -54,7 +54,8 @@ class _NextScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final provider = ref.watch(numberProvider);
-    return DefaultLayout(
+
+    return DefaultLayout(   
       title: 'StateProviderScreen',
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
@@ -72,6 +73,15 @@ class _NextScreen extends ConsumerWidget {
                     .update((state) => state + 1); // state는 지금 현재 상태이다.
               },
               child: Text('UP'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // 버튼을 눌렀을 때 실행되는 경우는 read!
+                ref.read(numberProvider.notifier).state =
+                    ref.read(numberProvider.notifier).state -
+                        1;
+              },
+              child: Text('DOWN'),
             ),
           ],
         ),
