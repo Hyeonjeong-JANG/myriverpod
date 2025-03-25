@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:myriverpod/layout/default_layout.dart';
-import 'package:myriverpod/riverpod/state_provider_screen.dart';
+import 'package:myriverpod/riverpod/state_provider.dart';
 
 class StateProviderScreen extends ConsumerWidget {
   const StateProviderScreen({super.key});
@@ -55,7 +55,7 @@ class _NextScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final provider = ref.watch(numberProvider);
 
-    return DefaultLayout(   
+    return DefaultLayout(
       title: 'StateProviderScreen',
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
@@ -78,8 +78,7 @@ class _NextScreen extends ConsumerWidget {
               onPressed: () {
                 // 버튼을 눌렀을 때 실행되는 경우는 read!
                 ref.read(numberProvider.notifier).state =
-                    ref.read(numberProvider.notifier).state -
-                        1;
+                    ref.read(numberProvider.notifier).state - 1;
               },
               child: Text('DOWN'),
             ),
