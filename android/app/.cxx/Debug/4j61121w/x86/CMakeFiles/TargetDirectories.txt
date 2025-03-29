@@ -1,0 +1,2 @@
+/Users/dev/Documents/project/flutter/myriverpod/android/app/.cxx/Debug/4j61121w/x86/CMakeFiles/edit_cache.dir
+/Users/dev/Documents/project/flutter/myriverpod/android/app/.cxx/Debug/4j61121w/x86/CMakeFiles/rebuild_cache.dir
