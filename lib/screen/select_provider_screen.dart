@@ -8,7 +8,6 @@ class SelectProviderScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    print('build');
     final state = ref.watch(selectProvider.select((value) => value.isSpicy));
     // value는 selectProvider의 상태에 해당하는 값이다.
     // 그리고 이 state는 isSpicy가 변할 때만 watch한다!
