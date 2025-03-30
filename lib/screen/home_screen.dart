@@ -4,6 +4,7 @@ import 'package:myriverpod/screen/auto_dispose_modifier_screen.dart';
 import 'package:myriverpod/screen/family_modifier_screen.dart';
 import 'package:myriverpod/screen/future_provider_screen.dart';
 import 'package:myriverpod/screen/listen_provider_screen.dart';
+import 'package:myriverpod/screen/provider_screen.dart';
 import 'package:myriverpod/screen/select_provider_screen.dart';
 import 'package:myriverpod/screen/state_notifier_provider_screen.dart';
 import 'package:myriverpod/screen/state_provider_screen.dart';
@@ -88,7 +89,7 @@ class HomeScreen extends StatelessWidget {
             },
             child: Text('ListenProviderScreen'),
           ),
-           ElevatedButton(
+          ElevatedButton(
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
@@ -97,6 +98,16 @@ class HomeScreen extends StatelessWidget {
               );
             },
             child: Text('SelectProviderScreen'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => ProviderScreen(),
+                ),
+              );
+            },
+            child: Text('ProviderScreen'),
           ),
         ],
       ),
